@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql/mysql-server:latest # ao subir a imagem pela 1° vez siga o passo a passo do README.md
+    container_name: my-mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=admin
+      - MYSQL_ROOT_PASSWORD=admin
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./database-volume/_data:/var/lib/mysql
