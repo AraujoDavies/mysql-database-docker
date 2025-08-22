@@ -10,3 +10,11 @@ services:
       - '3306:3306'
     volumes:
       - ./database-volume/_data:/var/lib/mysql
+
+  my-dumps: 
+    build: .
+    restart: always
+    volumes:
+      - ./main.py:/app/main.py
+      - ./bkps/:/app/bkps/
+    command: bash -c "python3.11 main.py" # main.py
