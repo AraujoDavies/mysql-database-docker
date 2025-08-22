@@ -12,3 +12,10 @@ banco de dados rodando em container
   FLUSH PRIVILEGES;
   
   docker restart my-mysql
+
+
+# main.py
+
+Serve para BKP (Dumps)
+
+Necessário configurar variavel MEUS_BKPS e schedule com novo item do dict
